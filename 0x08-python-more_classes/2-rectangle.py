@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """
-Define a Rectangle class
+Defines a Rectangle class.
 """
 
 
 class Rectangle:
-    """Rectangle class defined by width and height."""
+    """Rectangle class body """
 
-    def __init___(self, width=0, height=0):
-        """Initializes Rectangle instance in contructor."""
+    def __init__(self, width=0, height=0):
+        """Initializes a Rectangle width and height.
+        """
         self.width = width
         self.height = height
 
@@ -19,14 +20,12 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Sets the width of a Rectangle instance
-        Args:
-            value: valuse of the width, must be a positive integer
+        """Sets the width of rectangle
         """
         if not isinstance(value, int):
-            raise TypeError("Width must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("Width must be >= 0")
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
@@ -36,25 +35,25 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Set the height of a Rectangle instance
+        """Sets the height of a Rectangle instance
         Args:
             value: value of the height, must be a positive integer
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("heigh must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
-        """Calculates the area of a rectangle instance
+        """Calculates the area of a Rectangle instance
         Returns:
-            Area of the rectangle, given by height * width
+            Area of the the rectangle, given by height * width
         """
         return self.__width * self.__height
 
     def perimeter(self):
-        """Calculates the area of a rectangle instance
+        """Calculates the perimeter of a Rectangle instance
         Returns:
             Perimeter of the rectangle, given by 2 * (height + width)
         """
